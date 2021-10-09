@@ -1,0 +1,302 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 30px;
+  z-index: 1;
+  width: 100%;
+  margin: -70px 0 0 -60px;
+  position: fixed;
+  background: #fff;
+}
+
+.header-ttl {
+  width: 70px;
+  position: relative;
+  margin: 0 0 0 60px;
+}
+
+.header-nav-list {
+  display: flex;
+  font-weight: bold;
+}
+
+.header-nav-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.drawer-nav {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+
+.ttl {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.mv {
+  background: url(../img/mv.png) center / cover;
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  margin-top: 70px;
+}
+
+.blog {
+  width: 85%;
+  padding: 60px 0;
+  margin: 0 auto;
+}
+
+.blog-ttl {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.blog-list {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.blog-item {
+  width: 32%;
+  margin-right: 1%;
+  margin-top: 15px;
+  line-height: initial;
+}
+
+.blog-item-date {
+  margin-top: 5px;
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.blog-item-thumbnail {
+  text-decoration: none;
+  color: #000;
+  transition: 0.3s;
+}
+
+.blog-item-ttl {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 0 3px;
+}
+
+.blog-item-text {
+  text-decoration: none;
+  color: #000;
+  transition: 0.3s;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.inquiry {
+  text-align: center;
+  padding: 80px 0;
+  background: #f8f8ff;
+}
+
+.inquiry-inner {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.inquiry-ttl {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.inquiry-text {
+  margin-top: 10px;
+}
+
+.inquiry-button {
+  display: block;
+  text-align: center;
+  background: #e60033;
+  color: #fff;
+  padding: 15px;
+  width: 300px;
+  font-weight: bold;
+  margin: 40px auto 0;
+}
+
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-inner {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  align-items: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footer-nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 -25px 0;
+}
+
+.footer-nav-item::after {
+  content: "|";
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.footer-nav-text {
+  text-decoration: none;
+  transition: 0.3s;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .header-nav {
+    display: none;
+  }
+  .menu {
+    display: inline-block;
+    width: 36px;
+    height: 32px;
+    cursor: pointer;
+    position: relative;
+    z-index: inherit;
+  }
+
+  .menu-line-top,
+  .menu-line-middle,
+  .menu-line-bottom {
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    position: absolute;
+    transition: 0.5s;
+  }
+
+  .menu-line-top {
+    top: 0;
+  }
+
+  .menu-line-middle {
+    top: 14px;
+  }
+
+  .menu-line-bottom {
+    bottom: 0;
+  }
+
+  .drawer-nav {
+    display: block;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: -100%;
+    transition: .7s;
+    background: #fff;
+  }
+
+  .drawer-nav-list {
+    padding-top: 75px;
+    text-align: center;
+    margin-left: 60px;
+  }
+
+  .drawer-nav-item {
+    font-size: 18px;
+    margin-top: 50px;
+    color: #0000cd;
+  }
+
+  a {
+    color: #0000cd;
+    text-decoration: none;
+  }
+
+  .menu.open span:nth-of-type(1) {
+    top: 14px;
+    transform: rotate(45deg);
+  }
+
+  .menu.open span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .menu.open span:nth-of-type(3) {
+    top: 14px;
+    transform: rotate(-45deg);
+  }
+
+  .in{
+    transform: translateX(100%);
+  }
+
+  .blog {
+    width: 85%;
+  }
+
+  .blog-item {
+    width: 100%;
+    margin-right: 0%;
+  }
+
+  .inquiry-inner {
+    width: 85%;
+  }
+
+  .footer-inner {
+    width: 85%;
+  }
+
+  .footer-nav-item {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .footer-nav-item2 {
+    margin: 10px auto 0;
+  }
+
+  .footer-nav-text {
+    color: #fff;
+  }
+
+  .footer-nav-item::after {
+    display: none;
+  }
+
+  .footer-nav-list {
+    margin: 0 auto;
+  }
+
+  .footer-copy {
+  margin: 0 auto;
+}
+}
